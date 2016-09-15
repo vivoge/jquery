@@ -5,7 +5,7 @@ $('#box').css('color','blue');
    //alert($('img').size());
    //$('li').eq(1).css('color','yellow');
     //$('ul>li').css('color','pink')
-    console.log($('*'),$('*').length);
+    console.log($('#haha').prevUntil('ul').length);
 });
 
 
