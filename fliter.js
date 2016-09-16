@@ -1,8 +1,11 @@
 $(function(){
-$('#box').on('click','.button',function(){
-    $(this).clone().appendTo('#box');
-    console.log('1')
-})
+$('.show').on('click',function(){
+  $('#box').show(100)
+});
+
+    $('.hidden').on('click',function(){
+        $('#box').hide(100)
+    })
 
 
 });
