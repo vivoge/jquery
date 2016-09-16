@@ -1,8 +1,22 @@
+$(function(){
 
-
-$(document).ready(function(){
-
-console.log($('li:not(#red)').get(0));
+$('.button').bind('click',function(){
+    alert('123')
+});
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
