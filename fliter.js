@@ -1,8 +1,8 @@
 $(function(){
-
-$('.button').bind('click',function(){
-    alert('123')
-});
+$('#box').on('click','.button',function(){
+    $(this).clone().appendTo('#box');
+    console.log('1')
+})
 
 
 });
