@@ -17,15 +17,30 @@ app.get('/',function(req,res){
     res.render('aj.html')
 });
 
+app.post('/',function(req,res){
+    var body = req.body;
+    var user = body.username;
+    var password = body.password;
+    var detail={};
+    detail.user = user;
+    detail.password = password;
+    res.render('aj.html',{detail:detail})
+
+});
+
+
 app.get('/getlist',function(req,res){
     res.send('get success');
 });
 
 app.post('/getlist',function(req,res){
     var body = req.body;
-    var user = body.user;
+    var user = body.username;
     var password = body.password;
-    res.send(user+'|'+password);
+    var detail={};
+    detail.user = user;
+    detail.password = password;
+    res.render('jj.html',{detail:detail});
 });
 
 app.listen(9090);

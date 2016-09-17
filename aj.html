@@ -8,8 +8,17 @@
 </head>
 <body>
 <h1>欢迎进入AJAX世界</h1>
-<input class="input" type="submit" value="提交" width="80px" height="30px"/>
-<div id="box">目前无内容</div>
+
+<form action="/getlist" method="post">
+
+    <input type="text" name="username"/>
+    <input type="password" name="password"/>
+
+    <input class="input" type="submit" value="提交" />
+
+</form>
+
+<div id="box"></div>
 
 </body>
 </html>

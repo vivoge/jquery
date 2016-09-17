@@ -3,10 +3,10 @@ $(function(){
         $.ajax({
             url:'/getlist',
             type:'POST',
-            data:{
-                user:'vivoge',
-                password:'sdfasdf'
-            },
+            data:$('form').serialize()/*{
+                username:$('form input[name=username]').val(),
+                password:$('form input[name=password]').val()
+            }*/,
             success:function(res,status,xhr){
                 $('#box').html(res);
             }
