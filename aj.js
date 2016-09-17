@@ -1,16 +1,22 @@
 $(function(){
     $('.input').click(function(){
         $.ajax({
+            type:'post',
             url:'/getlist',
-            type:'POST',
-            data:$('form').serialize()/*{
-                username:$('form input[name=username]').val(),
-                password:$('form input[name=password]').val()
-            }*/,
+
+            data:{
+                username:$('input[name=username]').val(),
+                password:$('input[name=password]').val()
+            }
+,
+               // $('form').serialize(),
             success:function(res,status,xhr){
                 $('#box').html(res);
             }
         })
+
+       // $('#box').html($('form').serialize());
+
     });
 
 
